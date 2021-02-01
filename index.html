@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ejercicio Bootstrap</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+			integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<!--Para poder usar font awasome-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+			crossorigin="anonymous"
+		></script>
+
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+			integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+			crossorigin="anonymous"
+        ></script>
+        <link href="//db.onlinewebfonts.com/c/6d32b8e06f40fb7698cfb714b9e7975d?family=BillabongW00-Regular" rel="stylesheet" type="text/css"/>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body class=" bg-light">
+		<!-- ----------------------------------Esta es la barra de navegacion ------------------------------->
+        <nav class="navbar navbar-light bg-light justify-content-between">
+                    <i class="fa fa-instagram" style="font-size:48px;color:grey">	<a class="navbar-brand" href="#" style="font-size:48px;color:grey;font-style: italic; font-family: BillabongW00-Regular; ">
+					Instagram</a
+				    ></i>			
+                    <form class="form-inline">
+				    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal1">
+					Create a new post
+					</button>
+						<!-- Modal -->
+						<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Uplead New photo</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										...
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+										<button type="button" class="btn btn-primary">Save changes</button>
+									</div>
+                                </div>
+                                </div>
+                                </div>
+                                <!-- Modal -->
+                    <li class="nav-item dropdown" style="list-style-type: none">
+    				<a class="nav-link dropdown-toggle fas fa-cog"
+                                style="color:gray"
+								href="#"
+								id="navbarDropdownMenuLink"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+					></a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+								<li><a class="dropdown-item" href="#">Action</a></li>
+								<li><a class="dropdown-item" href="#">Another action</a></li>
+								<li><a class="dropdown-item" href="#">Something else here</a></li>
+					</ul>
+					</li>
+					
+                    </form>
+            </nav>
+		<!-------------------------------------------------Aqui termina la barra de navegacion -------------------------------->
+
+        <!-----------------------------------------Para hacer los cuadritos para que se cambie la vista ------------------------->
+        <!--NOTA:  Los botones no funcionan bien algo pasa con el toggle que hay que estriparlos dos veces para que se pongan y se quiten -->
+		
+			<div class="container-fluid ">
+			<!-- Nav pills -->
+			<div class="row bg-white justify-content-center">
+				<ul class="nav nav-pills justify-content-center  ">
+					<li class="nav-item">
+						<!--#Vista1 va a ser la vista de lista-->
+						<a class="nav-link" data-toggle="collapse" href="#Vista1"><i class="fas fa-list" aria-hidden="true"></i></a>
+					</li>
+					<li class="nav-item">
+						<!--#Vista2 va a ser la vista de cuadritos-->
+						<a class="nav-link" data-toggle="collapse" href="#Vista2"><i class="fas fa-th-large" aria-hidden="true"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-----------------------------------------Aqui terminan los cuadritos ------------------------->
+		<br />
+<!-------------------------------------------------------------------VISTA 1----------------------------------------------------------->
+        <div class="container"><!--Este div es para la vista 1-->
+        <div  id="Vista1">
+				<br />
+				<div class="row hidden-md no-gutters ">
+					<!-- El no-gutters me quita el espacio entre foto y foto -->
+					<!--Esto es la primera fila-->
+					<!--Aqui comienza la carta 1 de la fila 1 -->
+					<div class="col-lg-6 offset-md-3 mb-4 ">
+						<div class="card ">
+							<div class="card-block">
+								<div class="card-header">
+									<div class="row">
+										<div class="col-8"><h6>My first photo</h6></div>
+										<div class="col text-right" style="color:gray">06/16</div>
+									</div>
+								</div>
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t31.0-8/13580534_907611562717867_1307394760570286126_o.jpg?_nc_cat=109&ccb=2&_nc_sid=a9b1d2&_nc_ohc=IgAkBD6-vUMAX-NHgFT&_nc_ht=scontent.fsjo3-1.fna&oh=0650a91377d6b0f8f2bce01ebc262a7b&oe=603C57F9"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-footer">
+									<div calss="row">
+										<b>100 Likes</b>
+										<p>
+											This was the first time my daughter visit a caribbean beach
+											<a
+												href="https://www.google.com/maps/place/Puerto+Viejo+de+Lim%C3%B3n/@9.6574962,-82.7550745,15z/data=!4m5!3m4!1s0x0:0xeed6e6e843aec0c3!8m2!3d9.6574962!4d-82.7550745"
+												>@Puerto Viejo</a
+											>
+										</p>
+									</div>
+									<div class="row" style="color: gray;">
+										<div class="col-6">
+											<i class="far fa-heart"> Coment...</i>
+										</div>
+										<div class="col offset-4">
+											<i class="fa fa-ellipsis-v "></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--Aqui Termina la carta  la carta-->
+
+					<!--Aqui comienza la carta 1 de la fila 2 -->
+					<div class="col-lg-6 offset-md-3 mb-4 ">
+						<div class="card ">
+							<div class="card-block">
+								<div class="card-header">
+									<div class="row">
+										<div class="col-8"><h6>My first photo</h6></div>
+										<div class="col text-right" style="color:gray">06/14</div>
+									</div>
+								</div>
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/13240147_880566125422411_8805445045393014227_n.jpg?_nc_cat=111&ccb=2&_nc_sid=174925&_nc_ohc=SZVziqj7ixIAX-bLdZ1&_nc_ht=scontent.fsjo3-1.fna&oh=fa096222c8095a803d0944b7fd3c8d3d&oe=6038F421"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-footer">
+									<div calss="row">
+										<b>75 Likes</b>
+										<p>
+											Feliz !
+										</p>
+									</div>
+									<div class="row" style="color: gray;">
+										<div class="col-6">
+											<i class="far fa-heart"> Coment...</i>
+										</div>
+										<div class="col offset-4">
+											<i class="fa fa-ellipsis-v "></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+
+					<!--Aqui comienza la carta 1 de la fila 3 -->
+					<div class="col-lg-6 offset-md-3 mb-4 ">
+						<div class="card ">
+							<div class="card-block">
+								<div class="card-header">
+									<div class="row">
+										<div class="col-8"><h6>My first photo</h6></div>
+										<div class="col text-right" style="color:gray">12/20</div>
+									</div>
+								</div>
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/118920896_2247212902091053_6605874158641605460_o.jpg?_nc_cat=109&ccb=2&_nc_sid=84a396&_nc_ohc=8coL2ecg_CEAX-yv1B4&_nc_ht=scontent.fsjo3-1.fna&oh=50f3ef87749f81c7ad3ee8e0446aa6ee&oe=603A580A"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-footer">
+									<div calss="row">
+										<b>25 Likes</b>
+										<p>
+											<i class="fas fa-heart"> Aldous Huxley </i>
+										</p>
+									</div>
+									<div class="row" style="color: gray;">
+										<div class="col-6">
+											<i class="far fa-heart"> Coment...</i>
+										</div>
+										<div class="col offset-4">
+											<i class="fa fa-ellipsis-v "></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+					<!--Aqui comienza la carta 1 de la fila 4 -->
+					<div class="col-lg-6 offset-md-3 mb-4 ">
+						<div class="card ">
+							<div class="card-block">
+								<div class="card-header">
+									<div class="row">
+										<div class="col-8"><h6>My first photo</h6></div>
+										<div class="col text-right" style="color:gray">05/17</div>
+									</div>
+								</div>
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/11902289_742816929197332_593991693125528569_n.jpg?_nc_cat=107&ccb=2&_nc_sid=ba80b0&_nc_ohc=GzqkfQ15qvQAX93Yt1O&_nc_ht=scontent.fsjo3-1.fna&oh=aa2518df6d64cbd05d7f2ba7eb6bed3c&oe=603A59DA"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-footer">
+									<div calss="row">
+										<b>10 Likes</b>
+										<p>
+											Esperando a que a Sofi se le pase esta etapa.
+										</p>
+									</div>
+									<div class="row" style="color: gray;">
+										<div class="col-6">
+											<i class="far fa-heart"> Coment...</i>
+										</div>
+										<div class="col offset-4">
+											<i class="fa fa-ellipsis-v "></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+					<!--Aqui comienza la carta 1 de la fila 5 -->
+					<div class="col-lg-6 offset-md-3 mb-4 ">
+						<div class="card ">
+							<div class="card-block">
+								<div class="card-header">
+									<div class="row">
+										<div class="col-8"><h6>My first photo</h6></div>
+										<div class="col text-right" style="color:gray">05/17</div>
+									</div>
+								</div>
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/1526994_383796251766070_885780072_n.jpg?_nc_cat=110&ccb=2&_nc_sid=ba80b0&_nc_ohc=X0M3Stg4XcIAX8TSGY7&_nc_ht=scontent.fsjo3-1.fna&oh=c0437ebe41e5222478490d559595147d&oe=603AC626"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-footer">
+									<div calss="row">
+										<b>23 Likes</b>
+										<p>
+											Solo un dislexico entiende el sufrimiento
+										</p>
+									</div>
+									<div class="row" style="color: gray;">
+										<div class="col-6">
+											<i class="far fa-heart"> Coment...</i>
+										</div>
+										<div class="col offset-4">
+											<i class="fa fa-ellipsis-v "></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+					<!--Aqui comienza la carta 1 de la fila 6 -->
+					<div class="col-lg-6 offset-md-3 mb-4 ">
+						<div class="card ">
+							<div class="card-block">
+								<div class="card-header">
+									<div class="row">
+										<div class="col-8"><h6>My first photo</h6></div>
+										<div class="col text-right" style="color:gray">02/19</div>
+									</div>
+								</div>
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/48424140_1610600739085609_7807496373640626176_o.jpg?_nc_cat=109&ccb=2&_nc_sid=84a396&_nc_ohc=CQ8hNIrClzMAX8CZ-YF&_nc_ht=scontent.fsjo3-1.fna&oh=5047dd626086b73d9dfc3dd7b3a31dd0&oe=603DA5C9"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-footer">
+									<div calss="row">
+										<b>23 Likes</b>
+										<p>
+											No filter needed
+										</p>
+									</div>
+									<div class="row" style="color: gray;">
+										<div class="col-6">
+											<i class="far fa-heart"> Coment...</i>
+										</div>
+										<div class="col offset-4">
+											<i class="fa fa-ellipsis-v "></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+					<!--Aqui comienza la carta 1 de la fila 7 -->
+					<div class="col-lg-6 offset-md-3 mb-4 ">
+						<div class="card ">
+							<div class="card-block">
+								<div class="card-header">
+									<div class="row">
+										<div class="col-8"><h6>My first photo</h6></div>
+										<div class="col text-right" style="color:gray">02/20</div>
+									</div>
+								</div>
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/92324771_2086893528122992_7725420957363339264_o.jpg?_nc_cat=104&ccb=2&_nc_sid=84a396&_nc_ohc=9pe3OexATacAX8UosV5&_nc_ht=scontent.fsjo3-1.fna&oh=d2ad7592124c33b0d365acf2489a4045&oe=603C0C31"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-footer">
+									<div calss="row">
+										<b>23 Likes</b>
+										<p>
+											Isabellita
+										</p>
+									</div>
+									<div class="row" style="color: gray;">
+										<div class="col-6">
+											<i class="far fa-heart"> Coment...</i>
+										</div>
+										<div class="col offset-4">
+											<i class="fa fa-ellipsis-v "></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+					<!--Aqui comienza la carta 1 de la fila 8 -->
+					<div class="col-lg-6 offset-md-3 mb-4 ">
+						<div class="card ">
+							<div class="card-block">
+								<div class="card-header">
+									<div class="row">
+										<div class="col-8"><h6>My first photo</h6></div>
+										<div class="col text-right" style="color:gray">02/20</div>
+									</div>
+								</div>
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/11138177_665291580283201_6214801895037759372_n.jpg?_nc_cat=103&ccb=2&_nc_sid=a9b1d2&_nc_ohc=YMFCKXxOrqEAX8IQpmX&_nc_ht=scontent.fsjo3-1.fna&oh=fcc2bc1ea93b841b039bceb68789be97&oe=603D9BA8"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-footer">
+									<div calss="row">
+										<b>23 Likes</b>
+										<p>
+											No caption needed
+										</p>
+									</div>
+									<div class="row" style="color: gray;">
+										<div class="col-6">
+											<i class="far fa-heart"> Coment...</i>
+										</div>
+										<div class="col offset-4">
+											<i class="fa fa-ellipsis-v "></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+				</div><!--Este es el div de la columna-->
+        </div><!--Este es el del ID-->
+         </div><!--Este es el del container de la vista 1-->
+<!---------------------------------------------------------  ESTA ES LA SEGUNDA VISTA----------------------------------------------------------------------->
+    <div class="container"><!--Este div es para la vista 2-->        
+           <div class="collapse" id="Vista2">
+				<br />
+				<div class="row hidden-md no-gutters">
+					<!-- El no-gutters me quita el espacio entre foto y foto -->
+					<!--Esto es la primeca fila-->
+					<!--Aqui comienza la carta 1 de la fila 1 -->
+					<div class="col-md-4 padding-0">
+						<div class="card h-100">
+							<!--LE pondo el h-100 para tratar de hacerlas todas del mismo tamaño-->
+							<div class="card-block">
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t31.0-8/13580534_907611562717867_1307394760570286126_o.jpg?_nc_cat=109&ccb=2&_nc_sid=a9b1d2&_nc_ohc=IgAkBD6-vUMAX-NHgFT&_nc_ht=scontent.fsjo3-1.fna&oh=0650a91377d6b0f8f2bce01ebc262a7b&oe=603C57F9"
+									class="card-img-top"
+									alt="..."
+								/>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+					<!--Aqui comienza la carta 2 de la fila 1 -->
+					<div class="col-md-4 padding-0">
+						<div class="card h-100">
+							<div class="card-block">
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/13240147_880566125422411_8805445045393014227_n.jpg?_nc_cat=111&ccb=2&_nc_sid=174925&_nc_ohc=SZVziqj7ixIAX-bLdZ1&_nc_ht=scontent.fsjo3-1.fna&oh=fa096222c8095a803d0944b7fd3c8d3d&oe=6038F421"
+									class="card-img-top"
+									alt="..."
+								/>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+					<!--Aqui comienza la carta 3 de la fila 1 -->
+					<div class="col-md-4 padding-0">
+						<div class="card h-100">
+							<div class="card-block">
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/118920896_2247212902091053_6605874158641605460_o.jpg?_nc_cat=109&ccb=2&_nc_sid=84a396&_nc_ohc=8coL2ecg_CEAX-yv1B4&_nc_ht=scontent.fsjo3-1.fna&oh=50f3ef87749f81c7ad3ee8e0446aa6ee&oe=603A580A"
+									class="card-img-top"
+									alt="..."
+								/>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+
+					<!--Aqui comienza la carta 4 de la fila 1 -->
+					<div class="col-md-4 padding-0">
+						<div class="card h-100">
+							<div class="card-block">
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/11902289_742816929197332_593991693125528569_n.jpg?_nc_cat=107&ccb=2&_nc_sid=ba80b0&_nc_ohc=GzqkfQ15qvQAX93Yt1O&_nc_ht=scontent.fsjo3-1.fna&oh=aa2518df6d64cbd05d7f2ba7eb6bed3c&oe=603A59DA"
+									class="card-img-top"
+									alt="..."
+								/>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+					<!--Aqui comienza la carta 5 de la fila 1 -->
+					<div class="col-md-4 padding-0">
+						<div class="card h-100">
+							<div class="card-block">
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/1526994_383796251766070_885780072_n.jpg?_nc_cat=110&ccb=2&_nc_sid=ba80b0&_nc_ohc=X0M3Stg4XcIAX8TSGY7&_nc_ht=scontent.fsjo3-1.fna&oh=c0437ebe41e5222478490d559595147d&oe=603AC626"
+									class="card-img-top"
+									alt="..."
+								/>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+					<!--Aqui comienza la carta 6 de la fila 1 -->
+					<div class="col-md-4 padding-0">
+						<div class="card h-100">
+							<div class="card-block">
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/48424140_1610600739085609_7807496373640626176_o.jpg?_nc_cat=109&ccb=2&_nc_sid=84a396&_nc_ohc=CQ8hNIrClzMAX8CZ-YF&_nc_ht=scontent.fsjo3-1.fna&oh=5047dd626086b73d9dfc3dd7b3a31dd0&oe=603DA5C9"
+									class="card-img-top"
+									alt="..."
+								/>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+					<!--Aqui comienza la carta 7 de la fila 1 -->
+					<div class="col-md-4 padding-0">
+						<div class="card h-100">
+							<div class="card-block">
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/92324771_2086893528122992_7725420957363339264_o.jpg?_nc_cat=104&ccb=2&_nc_sid=84a396&_nc_ohc=9pe3OexATacAX8UosV5&_nc_ht=scontent.fsjo3-1.fna&oh=d2ad7592124c33b0d365acf2489a4045&oe=603C0C31"
+									class="card-img-top"
+									alt="..."
+								/>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+					<!--Aqui comienza la carta 8 de la fila 1 -->
+					<div class="col-md-4 padding-0">
+						<div class="card h-100">
+							<div class="card-block">
+								<img
+									src="https://scontent.fsjo3-1.fna.fbcdn.net/v/t1.0-9/11138177_665291580283201_6214801895037759372_n.jpg?_nc_cat=103&ccb=2&_nc_sid=a9b1d2&_nc_ohc=YMFCKXxOrqEAX8IQpmX&_nc_ht=scontent.fsjo3-1.fna&oh=fcc2bc1ea93b841b039bceb68789be97&oe=603D9BA8"
+									class="card-img-top"
+									alt="..."
+								/>
+							</div>
+						</div>
+					</div>
+					<!--Aqui Termina la carta  la carta-->
+				</div><!---Este cierra el row-->
+			</div><!---Este cierra el id-->
+    </div><!---Este cierra el container de la vista 2-->
+</body>
+</html>
