@@ -107,11 +107,11 @@
 				<ul class="nav nav-pills justify-content-center  ">
 					<li class="nav-item">
 						<!--#Vista1 va a ser la vista de lista-->
-						<a class="nav-link" data-toggle="collapse" href="#Vista1"><i class="fas fa-list" aria-hidden="true"></i></a>
+						<a class="nav-link active" data-toggle="tab" href="#Vista1"><i class="fas fa-list" aria-hidden="true"></i></a>
 					</li>
 					<li class="nav-item">
 						<!--#Vista2 va a ser la vista de cuadritos-->
-						<a class="nav-link" data-toggle="collapse" href="#Vista2"><i class="fas fa-th-large" aria-hidden="true"></i></a>
+						<a class="nav-link" data-toggle="tab" href="#Vista2"><i class="fas fa-th-large" aria-hidden="true"></i></a>
 					</li>
 				</ul>
 			</div>
@@ -119,8 +119,8 @@
 		<!-----------------------------------------Aqui terminan los cuadritos ------------------------->
 		<br />
 <!-------------------------------------------------------------------VISTA 1----------------------------------------------------------->
-        <div class="container"><!--Este div es para la vista 1-->
-        <div  id="Vista1">
+        <div class="tab-content"><!--Este div tiene que tener a vista 1 y vista 2-->
+        <div  class= "row no-pad tab-pane active" id="Vista1">
 				<br />
 				<div class="row hidden-md no-gutters ">
 					<!-- El no-gutters me quita el espacio entre foto y foto -->
@@ -414,10 +414,11 @@
 					<!--Aqui Termina la carta  la carta-->
 				</div><!--Este es el div de la columna-->
         </div><!--Este es el del ID-->
-         </div><!--Este es el del container de la vista 1-->
+         
 <!---------------------------------------------------------  ESTA ES LA SEGUNDA VISTA----------------------------------------------------------------------->
-    <div class="container"><!--Este div es para la vista 2-->        
-           <div class="collapse" id="Vista2">
+    <!--<div class="tab">
+        --Este div es para la vista 2-->        
+          <div  class= "row no-pad tab-pane" id="Vista2">
 				<br />
 				<div class="row hidden-md no-gutters">
 					<!-- El no-gutters me quita el espacio entre foto y foto -->
@@ -530,6 +531,7 @@
 					<!--Aqui Termina la carta  la carta-->
 				</div><!---Este cierra el row-->
 			</div><!---Este cierra el id-->
-    </div><!---Este cierra el container de la vista 2-->
+    <!--</div>Este cierra el container de la vista 2-->
+    </div><!--Este es el del container de la vista 1 Y 2-->
 </body>
 </html>
